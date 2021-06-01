@@ -1,0 +1,77 @@
+.stock-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    min-height: 168px;
+    width: 360px;
+    margin: 1rem;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+.stock-card .description {
+    display: flex;
+    flex: 1;
+    align-self: stretch;
+    text-align: center;
+}
+
+.stock-card .description .name {
+    font-weight: bold;
+}
+
+.stock-card .description .date {
+    flex: 1;
+}
+
+.stock-card .description .tags {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.stock-card .info {
+    align-self: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.stock-card .info .price {
+    font-size: 40px;
+}
+
+.stock-card .info .variation {
+    align-self: center;
+    margin-top: 16px;
+    color: rgb(0, 0, 0, 0.75);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 4px 6px 3px 6px;
+}
+
+.stock-card .info .variation.positive {
+    background-color: var(--green);
+}
+
+.stock-card .info .variation.negative {
+    background-color: var(--red);
+}
+
+.stock-card .info .variation.neutral {
+    background-color: gray;
+}
+
+.stock-card .info .variation mat-icon {
+    height: 21px;
+    margin-right: 2px;
+    vertical-align: bottom;
+}
+
+@media screen and (max-width: 768px) {
+    .stock-card {
+        width: auto;
+    }
+}

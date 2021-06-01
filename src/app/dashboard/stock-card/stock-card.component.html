@@ -1,0 +1,18 @@
+<div class="stock-card">
+    <div class="description">
+        <span class="name">{{stock.name}}</span>
+        <span class="date">{{stock.date}}</span>
+        <span class="tags">
+            <span class="tag" *ngFor="let tag of stock.tags">{{tag}}</span>
+        </span>
+    </div>
+
+    <div class="info">
+        <span class="price">{{stock.price | currency: 'BRL'}}</span>
+        <span class="variation" [class.negative]="stock.variation < 0" [class.neutral]="stock.variation == 0"
+            [class.positive]="stock.variation > 0">
+            <mat-icon>{{getStockVariationIconName()}}</mat-icon>
+            {{formatStockVariation()}}
+        </span>
+    </div>
+</div>
